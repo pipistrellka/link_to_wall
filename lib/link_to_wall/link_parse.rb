@@ -138,8 +138,4 @@ def self.save_image(img_url, img, tmp=false)
         @params.merge!({:picture => "public/images/thumbs/#{name}"})
       end
  end
-
-
-
-
 end

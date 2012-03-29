@@ -1,16 +1,21 @@
-Test
-====
+= Link to wall
 
-Introduction goes here.
-
-
-Example
-=======
-
-Example goes here.
-
-
-Copyright (c) 2012 [name of plugin creator], released under the MIT license
+== Install
+  gem 'link_to_wall', :git => 'git://github.com/pipistrellka/link_to_wall.git'
+  gem 'mechanize'
+  gem 'rmagick'
+== Example
+   Return one picture:
+   params = LinkParse.get_html(url)
+   All pictures:
+   params = LinkParse.get_html(url, true)
 
 
-от каких плагинов зависит и как им пользоваться
+   params = LinkParse.get_html("http://www.koolinar.ru/recipe/view/103241")
+   {:host=>"www.koolinar.ru",
+   :subject=>"закуска \"Ti amo Italia\" (баклажаны+моцарелла+креветки+парма+базилик) Рецепт.Koolinar - клуб кулинаров.",
+   :body=>"закуска Ti amo Italia баклажанымоцареллакреветкипармабазилик - рецепт добавила chudo 13.03.12. Она считает, что вкусы у этого рецепта: самый потрясный и любимый",
+   :video=>nil,
+   :icon=>"http://www.koolinar.ru/favicon.ico",
+   :picture=>"public/images/thumbs/1333049149r103241_large.jpg"}
+
